@@ -1,4 +1,7 @@
-package Es1.entities;
+package Es1;
+
+import entities.Dipartimento;
+import entities.Livello;
 
 public class Dipendente {
     public double baseStipendio=1000;
@@ -8,8 +11,19 @@ public class Dipendente {
     private Livello tipo =Livello.OPERARIO;
     private Dipartimento tips=Dipartimento.AMMINISTRATORE;
 
+    @Override
+    public String toString() {
+        return "Dipendente{" +
+                "baseStipendio=" + baseStipendio +
+                ", matricola=" + matricola +
+                ", stipendio=" + stipendio +
+                ", importoOrarioStraordinario=" + importoOrarioStraordinario +
+                ", tipo=" + tipo +
+                ", tips=" + tips +
+                '}';
+    }
 
-    public Dipendente(int matricola, Dipartimento tips,double baseStipendio,double importoOrarioStraordinario,Livello tipo) {
+    public Dipendente(int matricola, Dipartimento tips, double baseStipendio, double importoOrarioStraordinario, Livello tipo) {
         this.matricola = matricola;
         this.tips = tips;
         this.stipendio=baseStipendio;
